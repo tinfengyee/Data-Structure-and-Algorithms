@@ -1,17 +1,15 @@
 const { createArray, swap, biggerCompare } = require('./util')
 
 function selectSort(array) {
-  let minIndex;
-  for (let i = 0; i < array.length - 1; i++) {
-    minIndex = i;
-    for (let j = i + 1; j < array.length; j++) {
-      if (biggerCompare(array[minIndex], array[j])) {
-        minIndex = j;
-      }
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    let temp = array[i];
+    while(j > 0 && biggerCompare(array[j - 1], temp)) {
+      array[j] = array[j-1];
+      j--;
     }
-    if (minIndex !== i) {
-      swap(array, minIndex, i)
-    }
+    // console.log('insert ' + temp);
+    array[j] = temp;
   }
   return array;
 }

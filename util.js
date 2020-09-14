@@ -17,6 +17,10 @@ function biggerCompare(a, b) {
   return a - b > 0;
 }
 
+function lesserCompare(a, b) {
+  return a - b < 0;
+}
+
 /**
  * @description Shuffle the array
  * @param {Array} array 
@@ -62,6 +66,7 @@ module.exports = {
   log,
   swap,
   biggerCompare,
+  lesserCompare,
   shuffle,
   createArray,
   createRandomArray

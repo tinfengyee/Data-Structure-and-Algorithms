@@ -1,4 +1,4 @@
-const { biggerCompare, swap, createArray } = require('../../util')
+const { biggerCompare, createArray } = require('../../util')
 
 // function insertionSort (array) {
 //   for (let i = 1; i < array.length; i++) {
